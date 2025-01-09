@@ -28,10 +28,19 @@
   <body>
     <section class="container">
       <article class="product">
-        <figure>
-          <img class="product__image" src="" alt="" />
-        </figure>
         <main>
+          <figure>
+            <img
+              class="product__image"
+              srcset="
+                images/image-product-mobile.jpg  686w,
+                images/image-product-desktop.jpg 600w
+              "
+              sizes="(min-width: 1440px) 100%, (max-width: 375px) 100%, 100%"
+              alt="An image of Gabrielle Essence Eau De Parfum"
+              src="images/image-product-desktop.jpg"
+            />
+          </figure>
           <p class="product__tag">Perfume</p>
           <h1 class="product__name">Gabrielle Essence Eau De Parfum</h1>
           <p class="product__description">
