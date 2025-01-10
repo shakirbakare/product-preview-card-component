@@ -30,6 +30,11 @@ body {
   box-sizing: border-box;
 }
 
+@mixin foote-link-style {
+  color: var(--dark-cyan);
+  font-weight: 700;
+}
+
 // - Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
 // - Weights: 500, 700
 
@@ -133,12 +138,10 @@ main {
   max-width: 144rem;
 
   &__link {
-    color: var(--dark-cyan);
-    font-weight: 700;
+    @include foote-link-style();
 
     &:visited {
-      color: var(--dark-cyan);
-      font-weight: 700;
+      @include foote-link-style();
     }
   }
 }
