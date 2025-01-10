@@ -26,7 +26,7 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6;
-  color: var(--very-dark-blue);
+  color: var(--dark-grayish-blue);
   box-sizing: border-box;
 }
 
@@ -56,10 +56,43 @@ body {
     display: block;
   }
   &__tag {
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.4rem;
   }
   &__name {
+    font-family: "Fraunces";
+    font-size: 4rem;
+    font-weight: 700;
+    width: 24rem;
+    line-height: 1;
+    color: var(--very-dark-blue);
+    margin-bottom: 2.5rem;
   }
   &__description {
+    margin-bottom: 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  &__button {
+    padding: 1.6rem 3.2rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    border: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: var(--dark-cyan);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    .icon {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
   }
 }
 
@@ -71,4 +104,27 @@ body {
 
 main {
   display: flex;
+  border-radius: 1.6rem;
+  overflow: hidden;
 }
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+
+  &__current {
+    font-family: "Fraunces";
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--dark-cyan);
+  }
+
+  &__original {
+    text-decoration: line-through;
+  }
+}
+
+// width="15"
+// height="16"
