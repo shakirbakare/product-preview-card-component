@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30rem 0;
+  padding: 18rem 0;
 }
 
 .product {
@@ -105,4 +105,19 @@ main {
 }
 .price__original {
   text-decoration: line-through;
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 2rem 0;
+  max-width: 144rem;
+}
+.attribution__link {
+  color: var(--dark-cyan);
+  font-weight: 700;
+}
+.attribution__link:visited {
+  color: var(--dark-cyan);
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

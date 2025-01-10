@@ -44,7 +44,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30rem 0;
+  padding: 18rem 0;
 }
 
 .product {
@@ -126,5 +126,19 @@ main {
   }
 }
 
-// width="15"
-// height="16"
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 2rem 0;
+  max-width: 144rem;
+
+  &__link {
+    color: var(--dark-cyan);
+    font-weight: 700;
+
+    &:visited {
+      color: var(--dark-cyan);
+      font-weight: 700;
+    }
+  }
+}
