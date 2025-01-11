@@ -19,7 +19,7 @@ html {
   font-size: 62.5%;
 
   @include respond-to-mobile() {
-    font-size: 30%;
+    font-size: 31.3%;
   }
 }
 
@@ -120,6 +120,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: hsl(158, 36%, 30%);
+    }
 
     .icon {
       width: 1.8rem;
