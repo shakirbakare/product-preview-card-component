@@ -14,8 +14,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
     - [Built with](#built-with)
   - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,21 +29,20 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/shakirbakare/preview-card-component)
-- [Live Site URL](https://shakirbakare.github.io/preview-card-component)
+- [Solution URL](https://github.com/shakirbakare/product-preview-card-component)
+- [Live Site URL](https://shakirbakare.github.io/product-preview-card-component)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
 - Sass
+- Sass Variables
+- Flexbox
 - BEM
 - @media query
 - @content directive
-- @if directive
 - @mixin
 
 ## Author
