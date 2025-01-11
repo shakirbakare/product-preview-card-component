@@ -40,7 +40,7 @@ body {
   box-sizing: border-box;
 }
 
-@mixin foote-link-style {
+@mixin footer-link-style {
   color: $dark-cyan;
   font-weight: 700;
 }
@@ -182,14 +182,14 @@ main {
   }
 
   &__link {
-    @include foote-link-style();
+    @include footer-link-style();
 
     &:not(:last-child) {
       margin-right: 1rem;
     }
 
     &:visited {
-      @include foote-link-style();
+      @include footer-link-style();
     }
   }
 }
