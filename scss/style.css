@@ -1,7 +1,7 @@
 html {
   font-size: 62.5%;
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   html {
     font-size: 30%;
   }
@@ -33,7 +33,7 @@ body {
   align-items: center;
   padding: 18rem 0;
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   .container {
     display: flex;
     justify-content: center;
@@ -45,11 +45,6 @@ body {
 .product {
   width: 72rem;
 }
-@media (min-width: 320px) and (max-width: 790px) {
-  .product {
-    margin-left: 3rem;
-  }
-}
 .product__image {
   width: 100%;
   display: block;
@@ -60,7 +55,7 @@ body {
   margin-bottom: 2rem;
   font-size: 1.4rem;
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   .product__tag {
     font-size: 1.2rem;
   }
@@ -73,7 +68,7 @@ body {
   line-height: 1;
   color: hsl(212, 21%, 14%);
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   .product__name {
     width: 30rem;
     font-size: 3.2rem;
@@ -107,7 +102,7 @@ body {
   background: hsl(0, 0%, 100%);
   max-width: 50%;
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   .text-wrapper {
     max-width: 100%;
   }
@@ -118,7 +113,7 @@ main {
   border-radius: 1.6rem;
   overflow: hidden;
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   main {
     flex-direction: column;
     width: 100%;
@@ -147,7 +142,7 @@ main {
   padding: 2rem 0;
   max-width: 144rem;
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   .attribution {
     padding-top: 4rem;
   }
@@ -167,7 +162,7 @@ main {
 figure {
   max-width: 50%;
 }
-@media (min-width: 320px) and (max-width: 790px) {
+@media (min-width: 20em) and (max-width: 49.37em) {
   figure {
     max-width: 100%;
   }

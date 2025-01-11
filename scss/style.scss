@@ -10,7 +10,7 @@ $dark-grayish-blue: hsl(228, 12%, 48%);
 $white: hsl(0, 0%, 100%);
 
 @mixin respond-to-mobile {
-  @media (min-width: 320px) and (max-width: 790px) {
+  @media (min-width: 20em) and (max-width: 49.37em) {
     @content;
   }
 }
@@ -73,10 +73,6 @@ body {
 
 .product {
   width: 72rem;
-
-  @include respond-to-mobile() {
-    margin-left: 3rem;
-  }
 
   &__image {
     width: 100%;
