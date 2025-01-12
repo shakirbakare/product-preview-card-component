@@ -30,7 +30,11 @@
         <main>
           <figure>
             <img
-              class="product__image"
+              srcset="
+                images/image-product-mobile.jpg  686w,
+                images/image-product-desktop.jpg 600w
+              "
+              sizes="(min-width: 1440px) 25vw, (max-width: 768px) 50vw, 100vw"
               alt="An image of Gabrielle Essence Eau De Parfum"
               src="images/image-product-desktop.jpg"
             />
