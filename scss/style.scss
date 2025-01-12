@@ -54,8 +54,7 @@ body {
 // sizes="(min-width: 1440px) 20vw, (max-width: 375px) 30vw, 30rem"
 
 .container {
-  width: 144rem;
-  max-width: 100%;
+  width: 100%;
   background: $cream;
   display: flex;
   justify-content: center;
@@ -76,7 +75,6 @@ body {
 
   &__image {
     width: 100%;
-    display: block;
   }
   &__tag {
     text-transform: uppercase;
@@ -196,10 +194,10 @@ main {
   }
 }
 
-figure {
-  max-width: 50%;
+// figure {
+//   max-width: 50%;
 
-  @include respond-to-mobile() {
-    max-width: 100%;
-  }
-}
+//   @include respond-to-mobile() {
+//     max-width: 100%;
+//   }
+// }

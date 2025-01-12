@@ -25,8 +25,7 @@ body {
 }
 
 .container {
-  width: 144rem;
-  max-width: 100%;
+  width: 100%;
   background: hsl(30, 38%, 92%);
   display: flex;
   justify-content: center;
@@ -47,7 +46,6 @@ body {
 }
 .product__image {
   width: 100%;
-  display: block;
 }
 .product__tag {
   text-transform: uppercase;
@@ -162,13 +160,4 @@ main {
 .attribution__link:visited {
   color: hsl(158, 36%, 37%);
   font-weight: 700;
-}
-
-figure {
-  max-width: 50%;
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  figure {
-    max-width: 100%;
-  }
 }/*# sourceMappingURL=style.css.map */
