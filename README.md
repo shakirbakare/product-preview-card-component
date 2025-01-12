@@ -44,6 +44,7 @@ Users should be able to:
 - @media query
 - @content directive
 - @mixin
+- Responsive image
 
 ## Author
 
