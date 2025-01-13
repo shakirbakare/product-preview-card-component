@@ -1,25 +1,19 @@
-// Primary colors
+:root {
+  // Primary colors
 
-$dark-cyan: hsl(158, 36%, 37%);
-$cream: hsl(30, 38%, 92%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
 
-// Neutral colors
+  // Neutral colors
 
-$very-dark-blue: hsl(212, 21%, 14%);
-$dark-grayish-blue: hsl(228, 12%, 48%);
-$white: hsl(0, 0%, 100%);
-
-@mixin respond-to-mobile {
-  @media (min-width: 20em) and (max-width: 49.37em) {
-    @content;
-  }
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
 }
 
-html {
-  font-size: 62.5%;
-
-  @include respond-to-mobile() {
-    font-size: 62%;
+@mixin respond-to-phone {
+  @media (max-width: 23.43em) {
+    @content;
   }
 }
 
@@ -31,60 +25,61 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond-to-phone() {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6;
-  color: $dark-grayish-blue;
-  box-sizing: border-box;
-}
-
-@mixin footer-link-style {
-  color: $dark-cyan;
-  font-weight: 700;
-}
-
-// - Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
-// - Weights: 500, 700
-
-// - Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-// - Weights: 700
-
-// sizes="(min-width: 1440px) 20vw, (max-width: 375px) 30vw, 30rem"
-
-.container {
-  width: 100%;
-  background: $cream;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18rem 0;
-
-  @include respond-to-mobile() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 5rem 0;
-  }
+  color: var(--dark-grayish-blue);
+  background: var(--cream);
 }
 
 .product {
   width: 72rem;
+  max-width: 100%;
+  min-height: 50rem;
+  display: flex;
+  border-radius: 2rem;
+  margin: 13rem auto;
+  overflow: hidden;
+
+  @include respond-to-phone() {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__image {
-    width: 100%;
+    flex: 0 1 50%;
+    height: auto;
+
+    @include respond-to-phone() {
+      flex: 0 1 auto;
+    }
   }
+
+  .text-container {
+    background: var(--white);
+    padding: 4rem;
+    flex: 0 1 50%;
+
+    @include respond-to-phone() {
+      flex: 0 1 25%;
+    }
+  }
+
   &__tag {
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.65rem;
     margin-bottom: 2rem;
-    font-size: 1.4rem;
-
-    @include respond-to-mobile() {
-      font-size: 1.2rem;
-    }
   }
 
   &__name {
@@ -93,16 +88,30 @@ body {
     font-weight: 700;
     width: 24rem;
     line-height: 1;
-    color: $very-dark-blue;
-
-    @include respond-to-mobile() {
-      width: 30rem;
-      font-size: 3.2rem;
-    }
+    color: var(--very-dark-blue);
   }
+
   &__description {
-    margin: 3rem 0;
-    font-size: 1.6rem;
+    width: 21rem;
+    margin: 2rem 0;
+  }
+
+  .price-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__price--current {
+    font-family: "Fraunces";
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--dark-cyan);
+  }
+
+  &__price--previous {
+    text-decoration: line-through;
   }
 
   &__button {
@@ -112,8 +121,8 @@ body {
     border: none;
     font-weight: 700;
     font-size: 1.6rem;
-    background: $dark-cyan;
-    color: $white;
+    background: var(--dark-cyan);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,73 +140,3 @@ body {
     }
   }
 }
-
-.text-wrapper {
-  padding: 3.6rem;
-  background: $white;
-  max-width: 50%;
-
-  @include respond-to-mobile() {
-    max-width: 100%;
-  }
-}
-
-main {
-  display: flex;
-  border-radius: 1.6rem;
-  overflow: hidden;
-
-  @include respond-to-mobile() {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-.price {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-
-  &__current {
-    font-family: "Fraunces";
-    font-size: 3.6rem;
-    font-weight: 700;
-    color: $dark-cyan;
-  }
-
-  &__original {
-    text-decoration: line-through;
-  }
-}
-
-.attribution {
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 2rem 0;
-  max-width: 144rem;
-
-  @include respond-to-mobile() {
-    padding-top: 4rem;
-  }
-
-  &__link {
-    @include footer-link-style();
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-
-    &:visited {
-      @include footer-link-style();
-    }
-  }
-}
-
-// figure {
-//   max-width: 50%;
-
-//   @include respond-to-mobile() {
-//     max-width: 100%;
-//   }
-// }

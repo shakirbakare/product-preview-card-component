@@ -1,10 +1,9 @@
-html {
-  font-size: 62.5%;
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  html {
-    font-size: 31.3%;
-  }
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
 }
 
 *,
@@ -15,48 +14,63 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media (max-width: 23.43em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6;
-  color: hsl(228, 12%, 48%);
-  box-sizing: border-box;
-}
-
-.container {
-  width: 100%;
-  background: hsl(30, 38%, 92%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18rem 0;
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 0;
-  }
+  color: var(--dark-grayish-blue);
+  background: var(--cream);
 }
 
 .product {
   width: 72rem;
+  max-width: 100%;
+  min-height: 50rem;
+  display: flex;
+  border-radius: 2rem;
+  margin: 13rem auto;
+  overflow: hidden;
+}
+@media (max-width: 23.43em) {
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .product__image {
-  width: 100%;
+  flex: 0 1 50%;
+  height: auto;
+}
+@media (max-width: 23.43em) {
+  .product__image {
+    flex: 0 1 auto;
+  }
+}
+.product .text-container {
+  background: var(--white);
+  padding: 4rem;
+  flex: 0 1 50%;
+}
+@media (max-width: 23.43em) {
+  .product .text-container {
+    flex: 0 1 25%;
+  }
 }
 .product__tag {
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.65rem;
   margin-bottom: 2rem;
-  font-size: 1.4rem;
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  .product__tag {
-    font-size: 1.2rem;
-  }
 }
 .product__name {
   font-family: "Fraunces";
@@ -64,17 +78,26 @@ body {
   font-weight: 700;
   width: 24rem;
   line-height: 1;
-  color: hsl(212, 21%, 14%);
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  .product__name {
-    width: 30rem;
-    font-size: 3.2rem;
-  }
+  color: var(--very-dark-blue);
 }
 .product__description {
-  margin: 3rem 0;
-  font-size: 1.6rem;
+  width: 21rem;
+  margin: 2rem 0;
+}
+.product .price-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.product__price--current {
+  font-family: "Fraunces";
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: var(--dark-cyan);
+}
+.product__price--previous {
+  text-decoration: line-through;
 }
 .product__button {
   padding: 1.8rem 3.2rem;
@@ -83,8 +106,8 @@ body {
   border: none;
   font-weight: 700;
   font-size: 1.6rem;
-  background: hsl(158, 36%, 37%);
-  color: hsl(0, 0%, 100%);
+  background: var(--dark-cyan);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,66 +121,4 @@ body {
 .product__button .icon {
   width: 1.8rem;
   height: 1.8rem;
-}
-
-.text-wrapper {
-  padding: 3.6rem;
-  background: hsl(0, 0%, 100%);
-  max-width: 50%;
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  .text-wrapper {
-    max-width: 100%;
-  }
-}
-
-main {
-  display: flex;
-  border-radius: 1.6rem;
-  overflow: hidden;
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  main {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-.price {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-}
-.price__current {
-  font-family: "Fraunces";
-  font-size: 3.6rem;
-  font-weight: 700;
-  color: hsl(158, 36%, 37%);
-}
-.price__original {
-  text-decoration: line-through;
-}
-
-.attribution {
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 2rem 0;
-  max-width: 144rem;
-}
-@media (min-width: 20em) and (max-width: 49.37em) {
-  .attribution {
-    padding-top: 4rem;
-  }
-}
-.attribution__link {
-  color: hsl(158, 36%, 37%);
-  font-weight: 700;
-}
-.attribution__link:not(:last-child) {
-  margin-right: 1rem;
-}
-.attribution__link:visited {
-  color: hsl(158, 36%, 37%);
-  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
