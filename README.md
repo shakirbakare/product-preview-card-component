@@ -37,14 +37,15 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
+- CSS custom properties 
 - Sass
-- Sass Variables
 - Flexbox
 - BEM
 - @media query
 - @content directive
 - @mixin
 - Responsive image
+- <picture> element for art direction 
 
 ## Author
 
