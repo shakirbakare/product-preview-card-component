@@ -41,6 +41,7 @@ Users should be able to:
 - Sass
 - Flexbox
 - BEM
+- @mixin
 - @media query
 - @content directive
 - Responsive image
