@@ -44,7 +44,7 @@ Users should be able to:
 - @media query
 - @content directive
 - Responsive image
-- <picture> element for art direction 
+- picture element for art direction 
 
 ## Author
 
