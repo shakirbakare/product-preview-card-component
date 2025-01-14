@@ -43,7 +43,6 @@ Users should be able to:
 - BEM
 - @media query
 - @content directive
-- @mixin
 - Responsive image
 - <picture> element for art direction 
 
