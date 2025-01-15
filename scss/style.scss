@@ -11,12 +11,6 @@
   --white: hsl(0, 0%, 100%);
 }
 
-@mixin respond-to-phone {
-  @media (max-width: 23.43em) {
-    @content;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -25,11 +19,18 @@
   box-sizing: inherit;
 }
 
+@mixin break-point-720 {
+  @media (max-width: 45em) {
+    @content;
+  }
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 
-  @include respond-to-phone() {
+  @include break-point-720() {
+    flex-direction: column;
     font-size: 50%;
   }
 }
@@ -45,34 +46,34 @@ body {
 
 .product {
   width: 72rem;
-  max-width: 100%;
-  min-height: 50rem;
+  height: 50rem;
   display: flex;
   border-radius: 2rem;
   margin: 13rem auto;
   overflow: hidden;
 
-  @include respond-to-phone() {
-    display: flex;
+  @include break-point-720() {
     flex-direction: column;
+    width: 43rem;
+    height: 77rem;
+    margin: 4rem auto;
   }
 
   &__image {
     flex: 0 1 50%;
-    height: auto;
 
-    @include respond-to-phone() {
-      flex: 0 1 auto;
+    @include break-point-720() {
+      flex: 0 1 40%;
     }
   }
 
   .text-container {
     background: var(--white);
     padding: 4rem;
-    flex: 0 1 50%;
+    flex: 1;
 
-    @include respond-to-phone() {
-      flex: 0 1 25%;
+    @include break-point-720() {
+      padding: 2.8rem;
     }
   }
 
@@ -80,6 +81,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.65rem;
     margin-bottom: 2rem;
+
+    @include break-point-720() {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__name {
@@ -89,11 +94,23 @@ body {
     width: 24rem;
     line-height: 1;
     color: var(--very-dark-blue);
+
+    @include break-point-720() {
+      width: 35rem;
+      font-size: 4rem;
+    }
   }
 
   &__description {
     width: 21rem;
     margin: 2rem 0;
+
+    @include break-point-720() {
+      width: 36.5rem;
+      font-size: 1.75rem;
+      margin: 1.5rem 0;
+      line-height: 1.8;
+    }
   }
 
   .price-container {
@@ -101,6 +118,10 @@ body {
     align-items: center;
     gap: 2rem;
     margin-bottom: 2.5rem;
+
+    @include break-point-720() {
+      margin-bottom: 1.4rem;
+    }
   }
 
   &__price--current {

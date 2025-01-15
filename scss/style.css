@@ -18,8 +18,9 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-@media (max-width: 23.43em) {
+@media (max-width: 45em) {
   html {
+    flex-direction: column;
     font-size: 50%;
   }
 }
@@ -35,42 +36,47 @@ body {
 
 .product {
   width: 72rem;
-  max-width: 100%;
-  min-height: 50rem;
+  height: 50rem;
   display: flex;
   border-radius: 2rem;
   margin: 13rem auto;
   overflow: hidden;
 }
-@media (max-width: 23.43em) {
+@media (max-width: 45em) {
   .product {
-    display: flex;
     flex-direction: column;
+    width: 43rem;
+    height: 77rem;
+    margin: 4rem auto;
   }
 }
 .product__image {
   flex: 0 1 50%;
-  height: auto;
 }
-@media (max-width: 23.43em) {
+@media (max-width: 45em) {
   .product__image {
-    flex: 0 1 auto;
+    flex: 0 1 40%;
   }
 }
 .product .text-container {
   background: var(--white);
   padding: 4rem;
-  flex: 0 1 50%;
+  flex: 1;
 }
-@media (max-width: 23.43em) {
+@media (max-width: 45em) {
   .product .text-container {
-    flex: 0 1 25%;
+    padding: 2.8rem;
   }
 }
 .product__tag {
   text-transform: uppercase;
   letter-spacing: 0.65rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 45em) {
+  .product__tag {
+    margin-bottom: 1.5rem;
+  }
 }
 .product__name {
   font-family: "Fraunces";
@@ -80,15 +86,34 @@ body {
   line-height: 1;
   color: var(--very-dark-blue);
 }
+@media (max-width: 45em) {
+  .product__name {
+    width: 35rem;
+    font-size: 4rem;
+  }
+}
 .product__description {
   width: 21rem;
   margin: 2rem 0;
+}
+@media (max-width: 45em) {
+  .product__description {
+    width: 36.5rem;
+    font-size: 1.75rem;
+    margin: 1.5rem 0;
+    line-height: 1.8;
+  }
 }
 .product .price-container {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-bottom: 2.5rem;
+}
+@media (max-width: 45em) {
+  .product .price-container {
+    margin-bottom: 1.4rem;
+  }
 }
 .product__price--current {
   font-family: "Fraunces";
