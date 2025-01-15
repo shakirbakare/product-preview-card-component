@@ -37,7 +37,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.6;
   color: var(--dark-grayish-blue);
@@ -45,8 +45,8 @@ body {
 }
 
 .product {
-  width: 72rem;
-  height: 50rem;
+  max-width: 75rem;
+  height: 57rem;
   display: flex;
   border-radius: 2rem;
   margin: 13rem auto;
@@ -60,7 +60,11 @@ body {
   }
 
   &__image {
-    flex: 0 0 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    flex: 0 1 90%;
+    object-fit: cover;
 
     @include break-point-720() {
       flex: 0 1 40%;
@@ -81,6 +85,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.65rem;
     margin-bottom: 2rem;
+    font-size: 1.6rem;
 
     @include break-point-720() {
       margin-bottom: 1.5rem;
@@ -89,9 +94,9 @@ body {
 
   &__name {
     font-family: "Fraunces";
-    font-size: 4rem;
+    font-size: 4.3rem;
     font-weight: 700;
-    width: 24rem;
+    width: 26rem;
     line-height: 1;
     color: var(--very-dark-blue);
 
@@ -102,8 +107,8 @@ body {
   }
 
   &__description {
-    width: 21rem;
-    margin: 2rem 0;
+    width: 29rem;
+    margin: 3rem 0;
 
     @include break-point-720() {
       width: 36.5rem;
