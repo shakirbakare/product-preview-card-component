@@ -51,7 +51,7 @@ body {
   }
 }
 .product__image {
-  flex: 0 1 50%;
+  flex: 0 0 50%;
 }
 @media (max-width: 45em) {
   .product__image {
@@ -61,7 +61,7 @@ body {
 .product .text-container {
   background: var(--white);
   padding: 4rem;
-  flex: 1;
+  flex: 0 1 50%;
 }
 @media (max-width: 45em) {
   .product .text-container {

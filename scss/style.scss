@@ -60,7 +60,7 @@ body {
   }
 
   &__image {
-    flex: 0 1 50%;
+    flex: 0 0 50%;
 
     @include break-point-720() {
       flex: 0 1 40%;
@@ -70,7 +70,7 @@ body {
   .text-container {
     background: var(--white);
     padding: 4rem;
-    flex: 1;
+    flex: 0 1 50%;
 
     @include break-point-720() {
       padding: 2.8rem;
