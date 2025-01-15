@@ -21,7 +21,7 @@ html {
 @media (max-width: 45em) {
   html {
     flex-direction: column;
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
@@ -46,7 +46,7 @@ body {
   .product {
     flex-direction: column;
     width: 43rem;
-    height: 77rem;
+    height: 75.5rem;
     margin: 4rem auto;
   }
 }
@@ -101,7 +101,7 @@ body {
     width: 36.5rem;
     font-size: 1.75rem;
     margin: 1.5rem 0;
-    line-height: 1.8;
+    line-height: 1.65;
   }
 }
 .product .price-container {
@@ -146,4 +146,19 @@ body {
 .product__button .icon {
   width: 1.8rem;
   height: 1.8rem;
+}
+
+.attribution {
+  text-align: center;
+  background: var(--white);
+  padding: 2rem 0;
+}
+.attribution__link:link, .attribution__link:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--dark-cyan);
+  font-weight: 600;
+}
+.attribution__link:link:not(:last-child), .attribution__link:visited:not(:last-child) {
+  margin-right: 1rem;
 }/*# sourceMappingURL=style.css.map */
